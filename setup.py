@@ -170,8 +170,8 @@ try:
     from wheel.bdist_wheel import bdist_wheel
 except ImportError:
     pass
-# else:
-#     setup_args['cmdclass']['bdist_wheel'] = css_js_prerelease(bdist_wheel)
+else:
+    setup_args['cmdclass']['bdist_wheel'] = css_js_prerelease(bdist_wheel)
 
 # Run setup --------------------
 def main():
